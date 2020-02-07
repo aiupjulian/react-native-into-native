@@ -3,16 +3,16 @@ import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 
 class RNTestScreen extends React.Component {
   render() {
-    var contents = this.props['scores'].map((score) => (
+    var contents = this.props['list'].map((score) => (
       <Text key={score.name}>
-        {score.name}:{score.value}
+        {score.name}: {score.value}
         {'\n'}
       </Text>
     ));
     return (
       <View style={styles.container}>
-        <Text style={styles.highScoresTitle}>2048 High Scores!</Text>
-        <Text style={styles.scores}>{contents}</Text>
+        <Text style={styles.title}>RN view in native app!</Text>
+        <Text style={styles.list}>{contents}</Text>
       </View>
     );
   }
@@ -25,12 +25,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
   },
-  highScoresTitle: {
+  title: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  scores: {
+  list: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
