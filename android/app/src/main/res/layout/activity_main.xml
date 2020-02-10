@@ -16,7 +16,7 @@
 
     <Button
         android:id="@+id/btnStartAnotherActivity"
-        android:text="Start Another Activity"
+        android:text="Go to RN View"
         android:textColor="#FFF"
         android:padding="20sp"
         android:background="#397bb2"

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func highScoreButtonTapped(sender : UIButton) {
       NSLog("Hello")
       let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
-      let mockData:NSDictionary = ["nativeParameter": "This is a parameter coming from iOS Native code"]
+      let mockData:NSDictionary = ["nativeParameter": "String parameter from iOS Native code"]
 
       let rootView = RCTRootView(
           bundleURL: jsCodeLocation!,

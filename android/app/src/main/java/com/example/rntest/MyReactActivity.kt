@@ -27,7 +27,7 @@ class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
             .setInitialLifecycleState(LifecycleState.RESUMED)
             .build()
         val initialProps = Bundle()
-        initialProps.putString("nativeParameter", "This is a parameter coming from Android Native code")
+        initialProps.putString("nativeParameter", "String parameter from Android Native code")
         mReactRootView!!.startReactApplication(mReactInstanceManager, "RNTestScreen", initialProps)
 
         setContentView(mReactRootView)
