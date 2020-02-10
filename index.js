@@ -3,16 +3,10 @@ import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 
 class RNTestScreen extends React.Component {
   render() {
-    var contents = this.props['list'].map((score) => (
-      <Text key={score.name}>
-        {score.name}: {score.value}
-        {'\n'}
-      </Text>
-    ));
     return (
       <View style={styles.container}>
         <Text style={styles.title}>RN view in native app!</Text>
-        <Text style={styles.list}>{contents}</Text>
+        <Text style={styles.parameter}>{this.props.nativeParameter}</Text>
       </View>
     );
   }
@@ -30,7 +24,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  list: {
+  parameter: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
